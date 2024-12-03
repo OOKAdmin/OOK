@@ -1,0 +1,108 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: unset;
+}
+
+/* Navbar css */
+
+.ME-navbar {
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+    display: flex;
+    padding: 0;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.ME-navbar img {
+    width: 40px;
+}
+
+/* Navbar Option */
+
+.ME-navbar-links {
+    position: fixed;
+    top: 5.5%;
+    width: 60%;
+    transform: translate(-50%, 0px);
+    left: 50%;
+    background: #00000080;
+    padding: 20px 0px;
+    border-radius: 15px;
+    padding-top: 30px;
+    z-index: 100;
+}
+
+.ME-navbar-links-ul {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3vw;
+    list-style: none;
+    padding: 0;
+    transition: 0.4s ease-in-out;
+    animation-name: NavbarLinksAnimation;
+    animation-iteration-count: 1;
+    animation-duration: 0.8s;
+}
+
+.ME-navbar-links-li {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.3vw;
+    font-family: 'Kanit', sans-serif !important;
+}
+
+.ME-navbar-links-li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+@keyframes NavbarLinksAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(3vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+}
+
+@media (max-width: 700px) {
+    .text-aligh-center.color-white {
+        font-size: 5vw !important;
+        margin: auto;
+    }
+    .ME-navbar-links {
+        top: 5.5vw;
+        width: 100%;
+        transform: translate(-50%, 0px);
+        left: 50%;
+        background: #00000080;
+        padding: 10px 0px;
+        border-radius: 0px;
+        padding-top: 30px;
+        z-index: 10;
+    }
+    .ME-navbar-links-li {
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 2.3vw;
+        font-family: 'Kanit', sans-serif !important;
+    }
+}
