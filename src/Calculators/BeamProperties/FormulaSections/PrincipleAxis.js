@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import Areaimg from '../../../images/Beam-Properties-Area-Side-Image.jpg'
 
@@ -30,25 +30,30 @@ export default function PrincipleAxis() {
             }
         };
     }, []);
-  return (
-    <>
+    return (
+        <>
             <section className='structure-analysis-calculator-formula-dropdown-section'>
-                <div className='mae-cad-info-second-section-main-grid-explore-more-grid'>
-                    <div className='calculator-Area '>
-                        <div className='calculator-area-overlay'></div>
-                        <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 ${isVisible ? 'scrolled' : ''}`}  >Principle axis:</h3>
-                        <br ref={textRef} />
-                        <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 defination ${isVisible ? 'scrolled' : ''}`} >Main axes of cross section or
-                            members which are perpendicular and intersect each other at the center of the area or centroid.
-                        </h3>
-                        <br />
-                        <br /><br />
-                    </div>
-                    <div>
-                        <img className='structure-analysis-calculator-formula-dropdown-section-img areaimg' src={Areaimg} alt='' />
+                <div className='container-fluid text-white bg-black py-4 align-items-center justify-content-center d-flex' style={{ maxWidth: '85%', margin: '0 auto', height: '70vh' }}>
+                    <div className="row justify-content-evenly py-4 align-items-center" >
+                        <div className='col-lg-6 col-md-12 mb-4 py-0 px-0 '>
+                            <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 ${isVisible ? 'scrolled' : ''}`}  >Principal axis:</h3>
+                            <br ref={textRef} />
+                            <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 defination scrollfromhere ${isVisible ? 'scrolled' : ''}`} >Main axes of cross section or
+                                members which are perpendicular and intersect each other at the center of the area or centroid.
+                            </h3>
+                        </div>
+
+                        <div className="col-lg-4 col-md-12">
+                            <img
+                                src={Areaimg} // Replace with your image URL
+                                alt="Placeholder"
+                                className="img-fluid"
+                                style={{ borderRadius: '20px' }}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
         </>
-  )
+    )
 }

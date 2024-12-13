@@ -51,7 +51,7 @@ export default function BeamProperties() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100 && !expanded) {
+      if (window.scrollY > 150 && !expanded) {
         setExpanded(true);
       }
       if (window.scrollY > 350 && !Sectionthird) {
@@ -89,192 +89,121 @@ export default function BeamProperties() {
     <>
       <div className='Background-Black'></div>
       <section className='background-white'>
-        <div className='calculator-first-section-div'>
-          <div className='calculator-first-section-imgdiv' style={{ height: '80vh', overflow: 'hidden' }}>
-            <img className='calculator-first-section-imgdiv-img' src={Background} alt='' style={{ transform: 'translate(-9%, -2.5vw)', width: '125%' }} />
-            <div className='calculator-first-section-imgdiv-shades' />
+        <div className="position-relative">
+          {/* Image section */}
+          <div className="position-relative overflow-hidden" style={{ height: '80vh' }}>
+            <img
+              src={Background}
+              alt="Background"
+              className=" h-100"
+              style={{ objectFit: 'cover', objectPosition: 'center', width: '123%', transform: 'translateX(-9%)' }}
+            />
           </div>
-          <div className='calculator-first-section-textdiv'>
-            <h3 className='calculator-first-section-textdiv-h1'>Beam Properties Calculator</h3>
-            <p className='calculator-first-section-textdiv-p'>Powerful tool for engineers, architects, and researchers <br />
-              to evaluate the behavior of different kinds <br /> of Cross Sections.
+
+          {/* Text section */}
+          <div className="container text-left text-black position-absolute top-50 translate-middle"
+            style={{
+              left: '48%'
+            }}
+          >
+            <h3 className="display-4" style={{fontWeight:'600'}}>Beam Properties Calculator</h3>
+            <p className="fs-5">
+              Powerful tool for engineers, architects, and researchers to evaluate
+              <br />
+              the behavior of different kinds of Cross Sections.
             </p>
           </div>
         </div>
 
 
-        <section className='calculator-defination-section '>
-          <br />
-          <hr className='Beam-properties-calculator-hr' />
-          <div className={`calculator-defination-div SectionModules`}>
-            <h3 className={`Beam-properties-calculator-heading SectionModules ${expanded ? 'expanded' : ''}`}>
-              <span>OOK Beam Properties Calculator</span>
-            </h3>
-            <div className={`calculator-defination-section-div SectionModules ${expanded ? 'expanded' : ''}`}>
-              <h3 className='calculator-defination-section first-important'>
-                Specialized tool designed for the analysis and design<br />
-                of structural elements, such as beams, columns,<br />
-                shafts, and members of varying cross-sections.<br />
-              </h3>
-              <br />
-              <h3 className='calculator-defination-section second-important'>
-                This calculator makes it easier to analyze and optimize section properties in detail for<br />
-                structural integrity, efficiency, and safety in a variety of construction projects.<br />
-              </h3>
-              <br />
-              <h3 className='calculator-defination-section third-important'>
-                Easily calculate and visualize the geometric properties of various cross-section shapes,<br />
-                including Area, Centroid distances, Moments of Inertia, Section Modulus, and<br />
-                Torsional Constant essential for structural analysis and design.<br />
-              </h3>
+        <section className="calculator-definition-section text-center py-5">
+          <div className="container">
+            <hr className="mb-4" />
+            <br />
+            <h1
+              className={`display-4 mb-4 ${expanded ? "expanded" : ""}`}
+              style={{fontWeight:'600'}}
+            >
+              OOK Beam Properties Calculator
+            </h1>
+
+            <div className={`content ${expanded ? "expanded" : ""}`}>
+              <p className="first-important lead mb-4" style={{ fontWeight: "500" }}>
+                Specialized tool designed for the analysis and design
+                <br />
+                of structural elements, such as beams, columns,
+                <br />
+                shafts, and members of varying cross-sections.
+              </p>
+              <p className="second-important lead mb-4" style={{ fontWeight: "500" }}>
+                This calculator makes it easier to analyze and optimize section properties in detail for
+                <br />
+                structural integrity, efficiency, and safety in a variety of construction projects.
+              </p>
+              <p className="third-important lead" style={{ fontWeight: "500" }}>
+                Easily calculate and visualize the geometric properties of various cross-section shapes,
+                <br />
+                including Area, Centroid distances, Moments of Inertia, Section Modulus, and
+                <br />
+                Torsional Constant essential for structural analysis and design.
+              </p>
+            </div>
+
+            <hr className="mt-4" />
+          </div>
+        </section>
+
+        <section className="container-fluid py-4 justify-content-center align-items-center d-flex">
+          <div className="row structure-analysis-calculator-calculator">
+            {/* Left Section */}
+            <div className="col text-center py-5 structure-analysis-calculator-calculator-left ps-0 pe-0" style={{flex: '0 0 29%'}}>
+              <div className="d-flex flex-column gap-0 w-100 text-center" style={{justifyContent:'center', alignItems:'center'}}>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option1")}>Square</button>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option2")}>Rectangle</button>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option3")}>Hollow rectangle (rectangle tube)</button>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option4")}>Tee section</button>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option5")}>Channel section</button>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option6")}>I-beam with equal flanges</button>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option7")}>L section (unequal legs)</button>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option8")}>Solid circle</button>
+                <button className="btn mb-2 text-center" onClick={() => handleOptionChange("option9")}>Hollow circle or pipe</button>
+              </div>
+            </div>
+
+            {/* Center Section */}
+            <div className="col text-center py-3 structure-analysis-calculator-calculator-center bg-white justify-content-center align-items-center d-flex" style={{flex: '0 0 44%'}}>
+              {selectedOption === 'option1' && <img src={Square} alt="Square" className="img-fluid" />}
+              {selectedOption === 'option2' && <img src={Rectangle} alt="Rectangle" className="img-fluid" />}
+              {selectedOption === 'option3' && <img src={HollowRectangle} alt="Hollow Rectangle" className="img-fluid custom-img" />}
+              {selectedOption === 'option4' && <img src={TSection} alt="Tee Section" className="img-fluid" />}
+              {selectedOption === 'option5' && <img src={CChannel} alt="Channel Section" className="img-fluid custom-transform" />}
+              {selectedOption === 'option6' && <img src={IBeam} alt="I-beam" className="img-fluid custom-img" />}
+              {selectedOption === 'option7' && <img src={LSection} alt="L Section" className="img-fluid" />}
+              {selectedOption === 'option8' && <img src={Circle} alt="Solid Circle" className="img-fluid custom-circle" />}
+              {selectedOption === 'option9' && <img src={HollowCircle} alt="Hollow Circle" className="img-fluid" />}
+            </div>
+
+            {/* Right Section */}
+            <div className="col text-center py-3 bemProperties structure-analysis-calculator-calculator-right" style={{flex: '0 0 27%'}}>
+              <h3 className="text-white">Input</h3>
+              <div className="mt-3">
+                {selectedOption === 'option1' && <SquareFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+                {selectedOption === 'option2' && <RectangleFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+                {selectedOption === 'option3' && <HollowReactangleFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+                {selectedOption === 'option4' && <TeeSectionFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+                {selectedOption === 'option5' && <ChannelFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+                {selectedOption === 'option6' && <IsectionFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+                {selectedOption === 'option7' && <LsectionFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+                {selectedOption === 'option8' && <SolidCircleFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+                {selectedOption === 'option9' && <HollowCircleFile togglefunction={isActive3} toggleBreaks={toggleClass3} MetricOrImperial={MetricOrImperial} MetricOrImperialBtn={toggleMetricOrImperial} />}
+              </div>
             </div>
           </div>
-          <hr className='Beam-properties-calculator-hr' />
-          <br />
         </section>
 
-        <section className='structure-analysis-calculator-calculator'>
-          <div className='structure-analysis-calculator-calculator-left'>
-            <br /><br />
-            <button onClick={() => handleOptionChange("option1")}>Square</button>
-            <button onClick={() => handleOptionChange("option2")}>Rectangle</button>
-            <button onClick={() => handleOptionChange("option3")}>Hollow rectangle (rectangle tube)</button>
-            <button onClick={() => handleOptionChange("option4")}>Tee section</button>
-            <button onClick={() => handleOptionChange("option5")}>Channel section</button>
-            <button onClick={() => handleOptionChange("option6")}>I-beam with equal flanges</button>
-            <button onClick={() => handleOptionChange("option7")}>L section (unequal legs)</button>
-            <button onClick={() => handleOptionChange("option8")}>Solid circle</button>
-            <button onClick={() => handleOptionChange("option9")}>Hollow circle or pipe</button>
-            <br /><br />
-          </div>
-          <div className='structure-analysis-calculator-calculator-center center'>
-            {selectedOption === 'option1' && (
-              <img src={Square} alt="" />
-            )}
-            {selectedOption === 'option2' && (
-              <img src={Rectangle} alt="" />
-            )}
-            {selectedOption === 'option3' && (
-              <img src={HollowRectangle} alt="" style={{height: '565px' }}/>
-            )}
-            {selectedOption === 'option4' && (
-              <img src={TSection} alt="" />
-            )}
-            {selectedOption === 'option5' && (
-              <img src={CChannel} alt=""
-                style={{
-                  transform: 'translate(5%, 0px)'
-                }} />
-            )}
-            {selectedOption === 'option6' && (
-              <img src={IBeam} alt="" style={{height: '565px' }}/>
-            )}
-            {selectedOption === 'option7' && (
-              <img src={LSection} alt="" />
-            )}
-            {selectedOption === 'option8' && (
-              <img src={Circle} alt="" style={{ width: '450px', height: '450px' }} />
-            )}
-            {selectedOption === 'option9' && (
-              <img src={HollowCircle} alt="" />
-            )}
-          </div>
-          <div className='structure-analysis-calculator-calculator-right bemProperties'>
-            <h3 className='color-white text-aligh-center'>Input</h3>
-            <br />
-            {selectedOption === 'option1' && (
 
-              <SquareFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
 
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-            {selectedOption === 'option2' && (
-
-              <RectangleFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
-
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-            {selectedOption === 'option3' && (
-
-              <HollowReactangleFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
-
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-            {selectedOption === 'option4' && (
-
-              <TeeSectionFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
-
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-            {selectedOption === 'option5' && (
-
-              <ChannelFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
-
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-            {selectedOption === 'option6' && (
-
-              <IsectionFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
-
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-            {selectedOption === 'option7' && (
-
-              <LsectionFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
-
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-            {selectedOption === 'option8' && (
-
-              <SolidCircleFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
-
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-            {selectedOption === 'option9' && (
-
-              <HollowCircleFile
-                togglefunction={isActive3}
-                toggleBreaks={toggleClass3}
-
-                MetricOrImperial={MetricOrImperial}
-                MetricOrImperialBtn={toggleMetricOrImperial}
-              />
-            )}
-          </div>
-        </section>
-        <div className={isActive3 ? ' height110 ' : ' height110 height0 '} ></div>
+         <div className={isActive3 ? ' height110 ' : ' height110 height0 '} ></div>
 
         <br />
         <br />
@@ -299,14 +228,14 @@ export default function BeamProperties() {
         <br />
         <br />
         <br />
-        <Centroid />
+       <Centroid />
         <hr className="Beam-properties-calculator-hr"></hr>
         <br />
         <br />
         <br />
         <br />
         <br />
-        <AreaMomentsOfInertia />
+         <AreaMomentsOfInertia />
         <hr className="Beam-properties-calculator-hr"></hr>
         <br />
         <br />
@@ -320,11 +249,11 @@ export default function BeamProperties() {
         <br />
         <TorsionalConstant />
 
-        <section className='cse-header-top' onClick={scrollToTop}>
+        {/*<section className='cse-header-top' onClick={scrollToTop}>
           <Link smooth="true" duration={500} offset={-70}>
             <GrLinkTop className='' />
           </Link>
-        </section>
+        </section> */}
       </section>
 
     </>

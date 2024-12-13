@@ -72,7 +72,7 @@ export default function InputsParametersFile() {
                         <button className={`gbp-h3 structure-analysis-calculator-information-h3-button-Discovermore ${isVisible ? 'scrolled' : ''}`} onClick={handleCombinedClick}>Discover more</button>
                         <br /><br />
                     </div>
-                    <div>
+                    <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                         <img className='structure-analysis-calculator-formula-dropdown-section-img areaimg' src={Areaimg} alt='' />
                     </div>
                 </div>
@@ -111,10 +111,10 @@ export default function InputsParametersFile() {
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '1.8vw' }}>E = σ/ε</h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '1.8vw' }}>Where:</h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '78%', justifyContent: 'left', fontSize: '1.8vw' }}>
-                                    <span className='power' style={{ fontSize: '2vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '200', marginRight: '5px' }}>  σ is the stress </span>
+                                    <span className='power' style={{ fontSize: '1.5vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '200', marginRight: '5px' }}>  σ is the stress </span>
                                 </h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '78%', justifyContent: 'left', fontSize: '1.8vw' }}>
-                                    <span className='power' style={{ fontSize: '2vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '200', marginRight: '5px' }}>  ε is the strain </span>
+                                    <span className='power' style={{ fontSize: '1.5vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '200', marginRight: '5px' }}>  ε is the strain </span>
                                 </h3>
                                 <br />
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2vw' }}>What are the units of Young’s Modulus?</h3>
@@ -134,21 +134,21 @@ export default function InputsParametersFile() {
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>How to calculate second moment of area?</h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Area moment of inertia can be calculated by using this formula:</h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '1.8vw' }}>
-                                    <span className='power' style={{ fontSize: '2vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '300', marginRight: '5px', marginLeft: '8px' }}> Iy = ∫x
-                                        <span className='power' style={{ fontSize: '1.2vw', marginRight: '2px' }}>  2 </span>
+                                    <span className='power' style={{ fontSize: '1.5vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '300', marginRight: '5px', marginLeft: '8px' }}> Iy = ∫x
+                                        <span className='power' style={{ fontSize: '1vw', marginRight: '2px' }}>  2 </span>
 
                                         dA</span>
                                 </h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '1.8vw' }}>
-                                    <span className='power' style={{ fontSize: '2vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '300', marginRight: '5px', marginLeft: '8px' }}> Ix = ∫y
-                                        <span className='power' style={{ fontSize: '1.2vw', marginRight: '2px' }}>  2 </span>
+                                    <span className='power' style={{ fontSize: '1.5vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '300', marginRight: '5px', marginLeft: '8px' }}> Ix = ∫y
+                                        <span className='power' style={{ fontSize: '1vw', marginRight: '2px' }}>  2 </span>
 
                                         dA</span>
 
                                 </h3>
-                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '1.8vw' }}>Where:</h3>
+                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '1.5vw' }}>Where:</h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '78%', justifyContent: 'left', fontSize: '1.8vw' }}>
-                                    <span className='power' style={{ fontSize: '2vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '300', marginRight: '5px' }}> distance from the x axis to area dA</span>
+                                    <span className='power' style={{ fontSize: '1.5vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '300', marginRight: '5px' }}> distance from the x axis to area dA</span>
                                 </h3>
                                 <br />
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2vw' }}>What are the units of area moment of inertia?</h3>

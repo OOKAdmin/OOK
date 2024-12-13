@@ -350,10 +350,10 @@ export default function HollowCircleFile(props) {
           }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center' style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
             <br />
             <br />
-            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <h3 className='claculator-conversation-title'>
@@ -392,7 +392,7 @@ export default function HollowCircleFile(props) {
             </div>
 
             <br />
-            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moment of inertia:</h3>
+            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moment of inertia:</h3>
 
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -428,7 +428,7 @@ export default function HollowCircleFile(props) {
               </div>
             </div>
             <br />
-            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modules:</h3>
+            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modules:</h3>
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <h3 className='claculator-conversation-title'>
@@ -522,10 +522,10 @@ export default function HollowCircleFile(props) {
           }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center' style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
             <br />
             <br />
-            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <h3 className='claculator-conversation-title'>
@@ -564,7 +564,7 @@ export default function HollowCircleFile(props) {
             </div>
 
             <br />
-            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moment of inertia:</h3>
+            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moment of inertia:</h3>
 
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -599,7 +599,7 @@ export default function HollowCircleFile(props) {
               </div>
             </div>
             <br />
-            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modules:</h3>
+            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modules:</h3>
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <h3 className='claculator-conversation-title'>

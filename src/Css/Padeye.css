@@ -1,5 +1,5 @@
 /* Padeye header section */
-section.background-white.PadEye {
+/* section.background-white.PadEye {
     background: #fff;
 }
 
@@ -37,10 +37,10 @@ section.background-white.PadEye {
 
 .margin-top-10px {
     margin-top: 10px;
-}
+} */
 
 /* calculator css */
-.structure-analysis-calculator-calculator-right.PadeyeCalculator .Calculator-Side-A {
+/* .structure-analysis-calculator-calculator-right.PadeyeCalculator .Calculator-Side-A {
     background: white;
     color: #000;
     border: 2px solid white;
@@ -163,11 +163,23 @@ h3.sigma-symbol {
     width: 99%;
     opacity: 1;
     margin: auto;
-}
+} */
 
 /* Media query */
+
+/* @media (max-width: 700px) {
+    .calculator-defination-section-div.expanded {
+        height: 85%!important;
+    }
+    .calculator-defination-div {
+        height: 45vh!important;
+        overflow: hidden;
+        position: relative;
+    }
+} */
+
 /* Padeye header section Media query */
-@media (min-width: 1450px) {
+/* @media (min-width: 1450px) {
     .padeye.height110 {
         height: 150vw;
     }
@@ -305,6 +317,7 @@ h3.sigma-symbol {
     .structure-analysis-calculator-calculator-right.PadeyeCalculator h3.sigma-symbol .power {
         font-size: 1.5vw !important;
         /* margin-right: 5px; */
+/* 
     }
 }
 
@@ -364,6 +377,7 @@ h3.sigma-symbol {
     .structure-analysis-calculator-calculator-right.PadeyeCalculator h3.sigma-symbol .power {
         font-size: 2vw !important;
         /* margin-right: 5px; */
+/* 
     }
 
 }
@@ -402,6 +416,7 @@ h3.sigma-symbol {
         height: 515vw;
     }
 }*/
+/* 
 @media (max-width: 690px) {
     .padeye.height110 {
         height: 410vw;
@@ -452,4 +467,4 @@ h3.sigma-symbol {
     .padeye.height110 {
         height: 465vw;
     }
-}
+} */

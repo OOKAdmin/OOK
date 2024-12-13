@@ -87,22 +87,41 @@ body {
         font-size: 5vw !important;
         margin: auto;
     }
+
     .ME-navbar-links {
-        top: 5.5vw;
+        top: 7.5vw;
         width: 100%;
         transform: translate(-50%, 0px);
         left: 50%;
         background: #00000080;
-        padding: 10px 0px;
+        padding: 5px 0px;
         border-radius: 0px;
-        padding-top: 30px;
+        padding-top: 8px;
         z-index: 10;
     }
+
     .ME-navbar-links-li {
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 1px;
         font-size: 2.3vw;
         font-family: 'Kanit', sans-serif !important;
+    }
+
+    .ME-navbar {
+        background: #000000;
+        position: fixed;
+        width: 100%;
+        z-index: 101;
+        display: flex;
+        padding: 0;
+        transition: 0.5s;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+    }
+
+    .ME-navbar img {
+        width: 28px;
     }
 }

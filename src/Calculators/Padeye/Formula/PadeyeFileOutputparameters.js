@@ -71,8 +71,7 @@ export default function PadeyeFileOutputparameters() {
                                     (
                                     <span className='power' style={{ fontSize: '1.5vw', top: '0', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '100' }}>  σ</span>
                                     <span className='LowerPower' style={{ color: '#000', }}>b </span>
-                                    )
-                                    : </h3>
+                                    )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left' }}>Stress induced between the surface of the pin and the inner surface of the hole due to point contact.</h3>
 
                                 <br />
@@ -80,7 +79,7 @@ export default function PadeyeFileOutputparameters() {
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left' }}>Allowable bearing stress:
                                     <span style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                         <span className='power' style={{ marginLeft: '5px', fontSize: '1.5vw', top: '0', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '100' }}> σ</span>
-                                        <span className='LowerPower' style={{ color: '#000', }}>be(allow) </span>
+                                        <span className='LowerPower' style={{ color: '#000', fontSize: '1.2vw' }}>be(allow) </span>
                                         <span style={{ margin: '5px', }}>=</span>
                                         <span style={{ fontSize: '1.4vw', }}>0.9</span>
 
@@ -106,8 +105,7 @@ export default function PadeyeFileOutputparameters() {
                                     (
                                     <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '100' }}>  σ</span>
                                     <span className='LowerPower' style={{ color: '#000', }}>t </span>
-                                    )
-                                    :
+                                    )<span style={{transform:'translate(3px, 0px)'}}>:</span> 
                                 </h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left' }}>When load is lifting with the help of padeye. padeye experiences a tensile force due to the load of the component and the sling connected to padeye. This tensile force creates stress within the material of the padeye. The cheek plates are not included in this stress calculation</h3>
                             </div>
@@ -155,7 +153,7 @@ export default function PadeyeFileOutputparameters() {
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>
                                     Shear stress (
                                     <span className='power' style={{ fontSize: '1.5vw', top: '0px', color: '#000', padding: '0px 5px', fontFamily: "'Kanit', sans-serif !important", fontWeight: '100' }}> τ </span>
-                                    ) </h3>
+                                    )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
 
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left' }}>When the load is lifted due to lateral forces or shifting can cause the padeye to experience shear forces. These shear forces act parallel to the surface of the padeye and can result in shear stress within the material of the lug.</h3>
 
@@ -189,20 +187,20 @@ export default function PadeyeFileOutputparameters() {
                         <br />
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2vw' }}>Types of bending stress:</h3>
                         <br />
-                        <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '1.8vw', important: true }}>In plane bending stress
+                        <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '1.8vw', important: true }}>In plane bending stress 
                             (
                             <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '100' }}>  σ</span>
                             <span className='LowerPower' style={{ color: '#000', }}>Bd</span>
                             )
                             <span className='LowerPower' style={{ color: '#000', }}>allow </span>
 
-                            :
+                            <span style={{transform:'translate(5px, 0px)'}}> :</span>
                         </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left' }}>Produce when the load is applied parallel to the plane of the material.</h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left' }}>Allowable bending stress (in plane):
                             <span style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <span className='power' style={{ marginLeft: '10px', fontSize: '1.5vw', top: '0', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '100' }}> σ</span>
-                                <span className='LowerPower' style={{ color: '#000', }}>bd(allow) </span>
+                                <span className='LowerPower' style={{ color: '#000', }}>bd (allow) </span>
                                 <span style={{ margin: '5px', }}>=</span>
                                 <span style={{ fontSize: '1.4vw', }}>0.6</span>
 
@@ -221,7 +219,8 @@ export default function PadeyeFileOutputparameters() {
                             <span className='LowerPower' style={{ color: '#000', }}>Bdo</span>
                             )
                             <span className='LowerPower' style={{ color: '#000', }}>allow </span>
-                            :
+                            <span style={{transform:'translate(5px, 0px)'}}> :</span>
+
                         </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left' }}>Produce when the load is applied perpendicular to the plane of the material.</h3>
 
@@ -246,7 +245,7 @@ export default function PadeyeFileOutputparameters() {
                             <div>
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Hertz stress (
                                     <span className='power' style={{ fontSize: '1.5vw', top: '0px', color: '#000', padding: '0px 5px' }}> H </span>
-                                    ):
+                                    )<span style={{transform:'translate(3px, 0px)'}}>:</span>
                                 </h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '80%', justifyContent: 'left' }}>Used to calculate the amount of stress produced when two curved surfaces (such as a pin and a padeye hole)  come into contact and deform slightly under the loads involved.</h3>
 
@@ -277,9 +276,7 @@ export default function PadeyeFileOutputparameters() {
                             <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '100' }}>  σ</span>
                             <span className='LowerPower' style={{ color: '#000', }}>w</span>
 
-                            )
-
-                            : </h3>
+                            )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Both shear and tensile/compressive stresses developed at the welded connections of a padeye, depending on the type of joint and loading conditions.</h3>
                         <br />
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Allowable weld stress:
@@ -303,47 +300,41 @@ export default function PadeyeFileOutputparameters() {
                         <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Throat Thickness (
                             <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '100' }}>  σ</span>
                             <span className='LowerPower' style={{ color: '#000', }}>wtc</span>
-                            ) : </h3>
+                            )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Shortest distance from the root of the fillet weld to the face of the weld. It is the critical dimension that determines the cross-sectional area of the weld that resists shear and tensile forces.</h3>
                         <br />
                         <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>	Weld length
                             (
                             <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", }}>  L</span>
                             <span className='LowerPower' style={{ color: '#000', }}>wc</span>
-                            )
-                            : </h3>
+                            )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Total length of the joint weld the joint. </h3>
                         <br />
                         <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Welded area
                             (
                             <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", }}>  A</span>
-                            <span className='LowerPower' style={{ color: '#000', }}>wc</span>
-                            )
-                            : </h3>
+                            <span className='LowerPower' style={{ color: '#000', left:"2px" }}>wc</span>
+                            )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Cross-sectional area of the weld that is effective in resisting applied loads.</h3>
                         <br />
                         <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>	Design load
                             (
                             <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", }}>  P </span>
                             <span className='LowerPower' style={{ color: '#000', }}>d</span>
-                            )
-                            : </h3>
+                            )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Maximum amount of load that a structure is designed to handle.</h3>
                         <br />
                         <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Section modulus of weld
                             (
-                            <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", }}>  Z</span>
-                            )
-
-                            : </h3>
+                            <span className='power' style={{ fontSize: '1.5vw', top: '0px', color: '#000', fontFamily: "'Kanit', sans-serif !important", }}>  Z</span>
+                            )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Measure of the distribution of the cross-sectional area of a structure relative to a given axis and is used to calculate the bending strength.In padeye it is used to determine the strength and stability of welded joints.</h3>
                         <br />
                         <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Design moment
                             (
                             <span className='power' style={{ fontSize: '1.5vw', top: '-2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", }}>  M</span>
                             <span className='LowerPower' style={{ color: '#000', }}>d</span>
-                            )
-                            : </h3>
+                            )<span style={{transform:'translate(3px, 0px)'}}>:</span> </h3>
                         <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Maximum moment that a structural element, such as a beam, column, or welded joint, can safely withstand without failure.</h3>
 
 <br/>

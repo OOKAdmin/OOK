@@ -158,14 +158,14 @@ export default function BeamDeflection() {
 
   const [supports, setSupports] = useState([{ type: 'fixed', position: 0 }]);
   const [pointLoads, setPointLoads] = useState([{ position: 0, magnitude: 10000 }]);
-  const [pointLoadSelectedUnit, setPointLoadSelectedUnit] = useState('N'); // Default unit is Newton
+  const [pointLoadSelectedUnit, setPointLoadSelectedUnit] = useState('KN'); // Default unit is Newton
 
 
 
   const [distributedLoads, setDistributedLoads] = useState([
     { start_position: 0, end_position: 0, start_magnitude: 0, end_magnitude: 0 },
   ]);
-  const [distributedLoadSelectedUnit, setDistributedLoadSelectedUnit] = useState('N/m'); // Default unit is Newton/meter
+  const [distributedLoadSelectedUnit, setDistributedLoadSelectedUnit] = useState('KN/m'); // Default unit is Newton/meter
 
 
   const [reactionData, setReactionData] = useState([]);
@@ -350,7 +350,6 @@ export default function BeamDeflection() {
           maxTicksLimit: 8,
 
         },
-        max: length, // Ensure the last tick aligns with the beam length
       },
       y: {
         title: {
@@ -391,7 +390,6 @@ export default function BeamDeflection() {
         ticks: {
           maxTicksLimit: 8,
         },
-        max: length, // Ensure the last tick aligns with the beam length
       },
       y: {
         title: {

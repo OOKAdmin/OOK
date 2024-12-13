@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function TeeSectionFile(props) {
   const units = ['mm', 'cm', 'm'];
@@ -200,9 +200,9 @@ export default function TeeSectionFile(props) {
     const denominator = 2 * (t * b + tw * d);
     const calculatedImperialCentroidYc = (numerator / denominator);
 
-    const formattedValue = momentOfInertiaIxSelectedUnit === 'm' 
-    ? calculatedImperialCentroidYc.toFixed(3) // 2 decimal places in scientific notation for m⁴
-    : calculatedImperialCentroidYc.toFixed(2); // 3 decimals for other units
+    const formattedValue = momentOfInertiaIxSelectedUnit === 'm'
+      ? calculatedImperialCentroidYc.toFixed(3) // 2 decimal places in scientific notation for m⁴
+      : calculatedImperialCentroidYc.toFixed(2); // 3 decimals for other units
 
 
     setCentroidYc((formattedValue / conversionFactors[centroidYcSelectedUnit][0]));
@@ -220,19 +220,19 @@ export default function TeeSectionFile(props) {
       const Area = (t * b) + (tw * d);
       const term3 = Area * Math.pow((d + t - Yc), 2);
       const momentOfInertiaIx = ((term1 / term2) - term3);
-  
+
       // Convert momentOfInertiaIx based on the selected unit
       const convertedValue = (momentOfInertiaIx * MomentOfInertiaIxConversionFactors['mm⁴'][MomentOfInertiaIxUnits.indexOf(momentOfInertiaIxSelectedUnit)]);
-  
+
       // Format the output based on the selected unit
-      const formattedValue = momentOfInertiaIxSelectedUnit === 'm⁴' 
+      const formattedValue = momentOfInertiaIxSelectedUnit === 'm⁴'
         ? convertedValue.toExponential(2) // 2 decimal places and append 'e' for m⁴
         : convertedValue.toFixed(3); // 3 decimals for other units
-  
+
       setMomentOfInertiaIx(formattedValue);
     }
   }, [b, d, t, tw, momentOfInertiaIxSelectedUnit]);
-  
+
 
   useEffect(() => {
     const value = b;
@@ -240,12 +240,12 @@ export default function TeeSectionFile(props) {
       const term1 = ((t * Math.pow(b, 3)) + (d * Math.pow(tw, 3)));
       const term2 = 12;
       const momentOfInertiaIy = (term1 / term2);
-  
+
       const convertedValue = (momentOfInertiaIy * MomentOfInertiaIyConversionFactors['mm⁴'][MomentOfInertiaIyUnits.indexOf(momentOfInertiaIySelectedUnit)]);
-      
-      const formattedValue = momentOfInertiaIySelectedUnit === 'm⁴' 
-      ? convertedValue.toExponential(2) // 2 decimal places and append 'e' for m⁴
-      : convertedValue.toFixed(3); // 3 decimals for other units
+
+      const formattedValue = momentOfInertiaIySelectedUnit === 'm⁴'
+        ? convertedValue.toExponential(2) // 2 decimal places and append 'e' for m⁴
+        : convertedValue.toFixed(3); // 3 decimals for other units
 
       setMomentOfInertiaIy(formattedValue);
     }
@@ -265,10 +265,10 @@ export default function TeeSectionFile(props) {
       const Sxdenomenator = (d + t) - Yc;
       const sectionModulesValue = (Ix / Sxdenomenator).toFixed(2);
       const convertedValue = (sectionModulesValue * SectionModulusSxConversionFactors['mm³'][SectionModulusSxUnits.indexOf(sectionModulusSxSelectedUnit)]);
-      
-      const formattedValue = sectionModulusSxSelectedUnit === 'm³' 
-      ? convertedValue.toExponential(2) // 2 decimal places and append 'e' for m⁴
-      : convertedValue.toFixed(3); // 3 decimals for other units
+
+      const formattedValue = sectionModulusSxSelectedUnit === 'm³'
+        ? convertedValue.toExponential(2) // 2 decimal places and append 'e' for m⁴
+        : convertedValue.toFixed(3); // 3 decimals for other units
 
       setSectionModulusSx(formattedValue);
     }
@@ -283,12 +283,12 @@ export default function TeeSectionFile(props) {
       const Xc = b / 2;
       const sectionModulesValue = (Iy / Xc).toFixed(4);
       const convertedValue = (sectionModulesValue * SectionModulusSyConversionFactors['mm³'][SectionModulusSyUnits.indexOf(SectionModulusSySelectedUnit)]);
-  
-      const formattedValue = SectionModulusSySelectedUnit === 'm³' 
-      ? convertedValue.toExponential(2) // 2 decimal places and append 'e' for m⁴
-      : convertedValue.toFixed(3); // 3 decimals for other units
 
-  
+      const formattedValue = SectionModulusSySelectedUnit === 'm³'
+        ? convertedValue.toExponential(2) // 2 decimal places and append 'e' for m⁴
+        : convertedValue.toFixed(3); // 3 decimals for other units
+
+
       setSectionModulusSy(formattedValue);
     }
   }, [b, d, t, tw, SectionModulusSySelectedUnit]);
@@ -750,7 +750,8 @@ export default function TeeSectionFile(props) {
           }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center'  style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
             <br />
             <br />
             <div className='' style={{
@@ -758,10 +759,11 @@ export default function TeeSectionFile(props) {
               width: '90%',
               margin: 'auto',
             }}>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Area:</h3>
+
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
-                  Area:
-                </h3>
+                <h3 className='claculator-conversation-title'>
+                  Area: </h3>
                 <div className='Calculator-Side-A'>
                   <div className='input-and-select-div'>
                     <input
@@ -787,7 +789,7 @@ export default function TeeSectionFile(props) {
               </div>
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -850,7 +852,7 @@ export default function TeeSectionFile(props) {
 
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -912,7 +914,7 @@ export default function TeeSectionFile(props) {
 
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1075,7 +1077,8 @@ export default function TeeSectionFile(props) {
           }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center'  style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
             <br />
             <br />
             <div className='' style={{
@@ -1083,10 +1086,11 @@ export default function TeeSectionFile(props) {
               width: '90%',
               margin: 'auto',
             }}>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Area:</h3>
+
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
-                  Area:
-                </h3>
+                <h3 className='claculator-conversation-title'>
+                  Area: </h3>
                 <div className='Calculator-Side-A'>
                   <div className='input-and-select-div'>
                     <input
@@ -1112,7 +1116,7 @@ export default function TeeSectionFile(props) {
               </div>
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1176,7 +1180,7 @@ export default function TeeSectionFile(props) {
 
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1238,7 +1242,7 @@ export default function TeeSectionFile(props) {
                 </div>
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>

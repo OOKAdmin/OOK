@@ -254,97 +254,97 @@ export default function LsectionFile(props) {
     useEffect(() => {
         const value = b;
         if (!isNaN(value)) {
-      
-          const area = t * (b - (-d) - t);
-          const xcnumerator = (b * b) + (d * t) - (t * t);
-          const xcdenominator = 2 * (b - (-d) - t);
-          const xc = xcnumerator / xcdenominator;
-          const numerator = (d * Math.pow(b, 3)) - ((d - t) * Math.pow(b - t, 3));
-          const momentOfInertiaIy = ((numerator / 3) - (area * Math.pow(b - xc, 2)));
-          const convertedValue = (momentOfInertiaIy * MomentOfInertiaIyConversionFactors['mm⁴'][MomentOfInertiaIyUnits.indexOf(momentOfInertiaIySelectedUnit)]);
-      
-          let formattedValue;
-          switch (momentOfInertiaIySelectedUnit) {
-            case 'm⁴':
-              formattedValue = convertedValue.toExponential(4);
-              break;
-            case 'cm⁴':
-              formattedValue = convertedValue.toFixed(4);
-              break;
-            case 'mm⁴':
-              formattedValue = convertedValue.toFixed(2);
-              break;
-            default:
-              formattedValue = convertedValue;
-          }
-      
-          setMomentOfInertiaIy(formattedValue);
+
+            const area = t * (b - (-d) - t);
+            const xcnumerator = (b * b) + (d * t) - (t * t);
+            const xcdenominator = 2 * (b - (-d) - t);
+            const xc = xcnumerator / xcdenominator;
+            const numerator = (d * Math.pow(b, 3)) - ((d - t) * Math.pow(b - t, 3));
+            const momentOfInertiaIy = ((numerator / 3) - (area * Math.pow(b - xc, 2)));
+            const convertedValue = (momentOfInertiaIy * MomentOfInertiaIyConversionFactors['mm⁴'][MomentOfInertiaIyUnits.indexOf(momentOfInertiaIySelectedUnit)]);
+
+            let formattedValue;
+            switch (momentOfInertiaIySelectedUnit) {
+                case 'm⁴':
+                    formattedValue = convertedValue.toExponential(4);
+                    break;
+                case 'cm⁴':
+                    formattedValue = convertedValue.toFixed(4);
+                    break;
+                case 'mm⁴':
+                    formattedValue = convertedValue.toFixed(2);
+                    break;
+                default:
+                    formattedValue = convertedValue;
+            }
+
+            setMomentOfInertiaIy(formattedValue);
         }
-      }, [b, d, t, momentOfInertiaIySelectedUnit]);
+    }, [b, d, t, momentOfInertiaIySelectedUnit]);
 
 
-      useEffect(() => {
+    useEffect(() => {
         const value = b;
         if (!isNaN(value)) {
-          const ycnumerator = (d * d) + (b * t) - (t * t);
-          const ycdenominator = 2 * (b - (-d) - t);
-          const yc = ycnumerator / ycdenominator;
-          const area = t * (b - (-d) - t);
-          const numerator = (b * Math.pow(d, 3)) - ((b - t) * Math.pow(d - t, 3));
-          const ix = (numerator / 3) - (area * Math.pow(d - yc, 2));
-          const sectionModulesValue = (ix / (d - yc));
-          const convertedValue = (sectionModulesValue * SectionModulusSxConversionFactors['mm³'][SectionModulusSxUnits.indexOf(sectionModulusSxSelectedUnit)]);
-      
-          let formattedValue;
-          switch (sectionModulusSxSelectedUnit) {
-            case 'm³':
-              formattedValue = convertedValue.toExponential(4);
-              break;
-            case 'cm³':
-              formattedValue = convertedValue.toFixed(4);
-              break;
-            case 'mm³':
-              formattedValue = convertedValue.toFixed(2);
-              break;
-            default:
-              formattedValue = convertedValue;
-          }
-      
-          setSectionModulusSx(formattedValue);
+            const ycnumerator = (d * d) + (b * t) - (t * t);
+            const ycdenominator = 2 * (b - (-d) - t);
+            const yc = ycnumerator / ycdenominator;
+            const area = t * (b - (-d) - t);
+            const numerator = (b * Math.pow(d, 3)) - ((b - t) * Math.pow(d - t, 3));
+            const ix = (numerator / 3) - (area * Math.pow(d - yc, 2));
+            const sectionModulesValue = (ix / (d - yc));
+            const convertedValue = (sectionModulesValue * SectionModulusSxConversionFactors['mm³'][SectionModulusSxUnits.indexOf(sectionModulusSxSelectedUnit)]);
+
+            let formattedValue;
+            switch (sectionModulusSxSelectedUnit) {
+                case 'm³':
+                    formattedValue = convertedValue.toExponential(4);
+                    break;
+                case 'cm³':
+                    formattedValue = convertedValue.toFixed(4);
+                    break;
+                case 'mm³':
+                    formattedValue = convertedValue.toFixed(2);
+                    break;
+                default:
+                    formattedValue = convertedValue;
+            }
+
+            setSectionModulusSx(formattedValue);
         }
-      }, [b, d, t, sectionModulusSxSelectedUnit]);
+    }, [b, d, t, sectionModulusSxSelectedUnit]);
 
 
-      useEffect(() => {
+    useEffect(() => {
         const value = b;
         if (!isNaN(value)) {
-          const area = t * (b - (-d) - t);
-          const xcnumerator = (b * b) + (d * t) - (t * t);
-          const xcdenominator = 2 * (b - (-d) - t);
-          const xc = xcnumerator / xcdenominator;
-          const numerator = (d * Math.pow(b, 3)) - ((d - t) * Math.pow(b - t, 3));
-          const iy = (numerator / 3) - (area * Math.pow(b - xc, 2));
-          const sectionModulesValue = (iy / (b - xc));
-          const convertedValue = (sectionModulesValue * SectionModulusSyConversionFactors['mm³'][SectionModulusSyUnits.indexOf(SectionModulusSySelectedUnit)]);
-      
-          let formattedValue;
-          switch (SectionModulusSySelectedUnit) {
-            case 'm³':
-              formattedValue = convertedValue.toExponential(4);
-              break;
-            case 'cm³':
-              formattedValue = convertedValue.toFixed(4);
-              break;
-            case 'mm³':
-              formattedValue = convertedValue.toFixed(2);
-              break;
-            default:
-              formattedValue = convertedValue;
-          }
-      
-          setSectionModulusSy(formattedValue);
+            const area = t * (b - (-d) - t);
+            const xcnumerator = (b * b) + (d * t) - (t * t);
+            const xcdenominator = 2 * (b - (-d) - t);
+            const xc = xcnumerator / xcdenominator;
+            const numerator = (d * Math.pow(b, 3)) - ((d - t) * Math.pow(b - t, 3));
+            const iy = (numerator / 3) - (area * Math.pow(b - xc, 2));
+            const sectionModulesValue = (iy / (b - xc));
+            const convertedValue = (sectionModulesValue * SectionModulusSyConversionFactors['mm³'][SectionModulusSyUnits.indexOf(SectionModulusSySelectedUnit)]);
+
+            let formattedValue;
+            switch (SectionModulusSySelectedUnit) {
+                case 'm³':
+                    formattedValue = convertedValue.toExponential(4);
+                    break;
+                case 'cm³':
+                    formattedValue = convertedValue.toFixed(4);
+                    break;
+                case 'mm³':
+                    formattedValue = convertedValue.toFixed(2);
+                    break;
+                default:
+                    formattedValue = convertedValue;
+            }
+
+            setSectionModulusSy(formattedValue);
         }
-      }, [b, d, t, SectionModulusSySelectedUnit]);
+    }, [b, d, t, SectionModulusSySelectedUnit]);
 
 
     const Imperialbunits = ['in'];
@@ -401,24 +401,6 @@ export default function LsectionFile(props) {
         const ImperialTValuefactor = ImperialTValueconversionFactors[unit][ImperialTValueunits.indexOf(ImperialTVselectedTUnit)];
         setImperialTValue((parseFloat(ImperialTValue) / ImperialTValuefactor).toFixed(3));
     };
-
-    // const ImperialTValueunits = ['in'];
-    // const ImperialTValueconversionFactors = {
-    //     in: [1],
-    // };
-
-    // const [ImperialTValue, setImperialTValue] = useState(0);
-    // const [ImperialTVselectedTUnit, setImperialTValueSelectedUnit] = useState('in');
-
-    // const handleImperialTValueInputChange = (value) => {
-    //     setImperialTValue(value);
-    // };
-
-    // const handleImperialTValueUnitChange = (unit) => {
-    //     setImperialTValueSelectedUnit(unit);
-    //     const ImperialTValuefactor = ImperialTValueconversionFactors[unit][ImperialTValueunits.indexOf(ImperialTVselectedTUnit)];
-    //     setImperialTValue((parseFloat(ImperialTValue) / ImperialTValuefactor));
-    // };
 
     const ImperialAreaUnits = ['in²'];
     const ImperialAreaConversionFactors = {
@@ -629,7 +611,7 @@ export default function LsectionFile(props) {
             const xc = xcnumerator / xcdenominator;
             const numerator = (d * Math.pow(b, 3)) - ((d - t) * Math.pow(b - t, 3));
             const iy = (numerator / 3) - (area * Math.pow(b - xc, 2));
-            const ImperialSectionModulusSy =( iy / (b - xc)).toFixed(2);
+            const ImperialSectionModulusSy = (iy / (b - xc)).toFixed(2);
             const currentFactor = ImperialSectionModulusSyConversionFactors['in³'][ImperialSectionModulusSyUnits.indexOf(ImperialSectionModulusSySelectedUnit)];
             setImperialSectionModulusSy((ImperialSectionModulusSy * currentFactor).toString());
         }
@@ -749,7 +731,8 @@ export default function LsectionFile(props) {
                     }}>
                         <br />
                         <br />
-                        <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+                        <h3 className='text-white calculator-defination-section text-center' style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
                         <br />
                         <br />
                         <div className='' style={{
@@ -757,10 +740,11 @@ export default function LsectionFile(props) {
                             width: '90%',
                             margin: 'auto',
                         }}>
+                            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Area:</h3>
+
                             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
-                                    Area:
-                                </h3>
+                                <h3 className='claculator-conversation-title'>
+                                    Area: </h3>
                                 <div className='Calculator-Side-A'>
                                     <div className='input-and-select-div'>
                                         <input
@@ -785,7 +769,7 @@ export default function LsectionFile(props) {
                                 </div>
                             </div>
                             <br />
-                            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+                            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
                             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <h3 className='claculator-conversation-title'>
@@ -846,7 +830,7 @@ export default function LsectionFile(props) {
                             </div>
                             <br />
 
-                            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
+                            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
 
                             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <h3 className='claculator-conversation-title'>
@@ -909,7 +893,7 @@ export default function LsectionFile(props) {
 
                             <br />
 
-                            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
+                            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
 
                             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <h3 className='claculator-conversation-title'>
@@ -1054,7 +1038,8 @@ export default function LsectionFile(props) {
                     }}>
                         <br />
                         <br />
-                        <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+                        <h3 className='text-white calculator-defination-section text-center' style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
                         <br />
                         <br />
                         <div className='' style={{
@@ -1062,10 +1047,11 @@ export default function LsectionFile(props) {
                             width: '90%',
                             margin: 'auto',
                         }}>
+                            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Area:</h3>
+
                             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
-                                    Area:
-                                </h3>
+                                <h3 className='claculator-conversation-title'>
+                                    Area: </h3>
                                 <div className='Calculator-Side-A'>
                                     <div className='input-and-select-div'>
                                         <input
@@ -1090,7 +1076,7 @@ export default function LsectionFile(props) {
                                 </div>
                             </div>
                             <br />
-                            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+                            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
                             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <h3 className='claculator-conversation-title'>
@@ -1151,7 +1137,7 @@ export default function LsectionFile(props) {
                             </div>
                             <br />
 
-                            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
+                            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
 
                             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <h3 className='claculator-conversation-title'>
@@ -1214,7 +1200,7 @@ export default function LsectionFile(props) {
 
                             <br />
 
-                            <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
+                            <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
 
                             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <h3 className='claculator-conversation-title'>
@@ -1280,5 +1266,5 @@ export default function LsectionFile(props) {
             )}
 
         </>
-  )
+    )
 }

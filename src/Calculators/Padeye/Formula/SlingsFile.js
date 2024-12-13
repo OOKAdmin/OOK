@@ -67,7 +67,7 @@ export default function SlingsFile() {
                         <button className={`gbp-h3 structure-analysis-calculator-information-h3-button-Discovermore ${isVisible ? 'scrolled' : ''} `} onClick={handleCombinedClick}>Discover more</button>
                         <br /><br />
                     </div>
-                    <div>
+                    <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                         <img className='structure-analysis-calculator-formula-dropdown-section-img areaimg' src={SlingBlackboximg} alt='' />
                     </div>
                 </div>
@@ -108,7 +108,7 @@ export default function SlingsFile() {
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Sling has a specific load-carrying capacity. Always ensure the selected sling’s capacity exceeds the load weight.</h3>
                                 <br />
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Sling angle :</h3>
-                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>As the angle decreases form, the tension on sling increases, which could potentially exceed the sling's rated capacity and cause a failure. Sling angle should not be less than 60deg.</h3>
+                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>As the angle decreases form, the tension on sling increases, which could potentially exceed the sling's rated capacity and cause a failure. Sling angle should not be less than 60 deg.</h3>
                                 <br />
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Type of Lift :</h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Nature of the lift, such as vertical, choker, or basket lift, also affects sling selection. Each type has different load capacities and application methods suited to specific lifting scenarios.</h3>

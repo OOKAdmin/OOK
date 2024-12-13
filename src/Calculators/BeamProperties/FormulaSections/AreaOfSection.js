@@ -63,127 +63,120 @@ export default function AreaOfSection() {
     return (
         <>
             <section className='structure-analysis-calculator-formula-dropdown-section'>
-                <div className='mae-cad-info-second-section-main-grid-explore-more-grid'>
-                    <div className='calculator-Area '>
-                        <div className='calculator-area-overlay'  ></div>
-                        <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 ${isVisible ? 'scrolled' : ''}`}  >Area of section(A):</h3>
-                        <br ref={textRef} />
-                        <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 defination scrollfromhere  ${isVisible ? 'scrolled' : ''}`} >Total amount of space inside the section.</h3>
-                        <br />
-                        <button className={`gbp-h3 structure-analysis-calculator-information-h3-button-Discovermore  ${isVisible ? 'scrolled' : ''}`} onClick={handleCombinedClick}>Discover more</button>
-                        <br /><br />
-                    </div>
-                    <div>
-                        <img className='structure-analysis-calculator-formula-dropdown-section-img areaimg' src={Areaimg} alt='' />
+                <div className="container-fluid text-white bg-black py-4 align-items-center justify-content-center d-flex" style={{ maxWidth: '85%', margin: '0 auto', height: '70vh' }}>
+                    <div className="row justify-content-evenly py-4 align-items-center" >
+                        {/* Text Column */}
+                        <div className="col-lg-6 col-md-12 mb-4 py-0 px-0">
+                            <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 ${isVisible ? 'scrolled' : ''}`}>Area of section(A):</h3>
+                            <h1 ref={textRef} />
+                            <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 defination scrollfromhere  ${isVisible ? 'scrolled' : ''}`}>
+                                Total amount of space inside the section.
+                            </h3>
+                            <button className={`gbp-h3 structure-analysis-calculator-information-h3-button-Discovermore  ${isVisible ? 'scrolled' : ''}`} onClick={handleCombinedClick}>Discover more</button>
+
+                        </div>
+
+                        {/* Image Column */}
+                        <div className="col-lg-4 col-md-12">
+                            <img
+                                src={Areaimg} // Replace with your image URL
+                                alt="Placeholder"
+                                className="img-fluid"
+                                style={{ borderRadius: '20px' }}
+                            />
+                        </div>
                     </div>
                 </div>
                 <br />
                 <br />
                 <br />
                 <br />
-                <h3 className='calculator-defination-section first-important heading' style={{ fontSize: '2vw', }}>
+                <h3 className='calculator-defination-section text-center first-important heading' style={{ fontSize: '2vw', }}>
                     What are the significance of area of sections?
                 </h3>
-                <h3 className='calculator-defination-section second-important' style={{ marginTop: '15px' }}>
+                <h5 className='calculator-defination-section defination text-center second-important' style={{ marginTop: '15px', fontSize: '1.2vw', }}>
                     Used for calculations of stress, strain, and moments of inertia.
-                </h3>
+                </h5>
                 <br />
                 <br />
-                <h3 className='calculator-defination-section third-important heading' style={{ fontSize: '2vw', }}>
+                <h3 className='calculator-defination-section text-center third-important heading' style={{ fontSize: '2vw', }}>
                     What are the inputs to calculate the area of section?
                 </h3>
-                <h3 className='calculator-defination-section third-important' style={{ marginTop: '15px' }}>
+                <h5 className='calculator-defination-section text-center third-important' style={{ marginTop: '15px', fontSize: '1.2vw', }}>
                     Dimension of cross-section
-                </h3>
+                </h5>
                 <br />
                 <br />
-                <h3 className='calculator-defination-section third-important heading' style={{ fontSize: '2vw', }}>
+                <h3 className='calculator-defination-section text-center third-important heading' style={{ fontSize: '2vw', }}>
                     How to calculate the area of cross section?
                 </h3>
-                <h3 className='calculator-defination-section third-important' style={{ marginTop: '15px' }}>
+                <h5 className='calculator-defination-section text-center third-important' style={{ marginTop: '15px', fontSize: '1.2vw', }}>
                     Area of section for various cross section can be calculated by using these formulas:
-                </h3>
+                </h5>
 
                 <br ref={targetRef} />
                 <br />
-                <div className={isActive ? 'mae-calculator-info ' : 'mae-calculator-info  active'} >
-                    <br />
-                    <br />
-                    <br />
-                    <table className='structure-analysis-calculator-formula-dropdown-section-formula-data' style={{ width: '90%' }}>
+
+
+                <div className={isActive ? 'mae-calculator-info custom-container py-5 ' : 'mae-calculator-info custom-container py-5 active'}>
+                    <table className="table custom-table text-center align-middle">
                         <tbody>
                             <tr>
-
                                 <td style={{ width: '30%' }}>
-                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '> Cross Section Shape </h3>
+                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Cross Section Shape</h3>
                                 </td>
                                 <td style={{ width: '40%' }}>
-                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '> Formula </h3>
+                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Formula</h3>
                                 </td>
                                 <td style={{ width: '30%' }}>
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Section Name</h3>
                                 </td>
-
                             </tr>
                             <tr>
-
-                                <td >
-                                    <img src={SquareImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt=''
-                                        style={{
-                                            width: '18vw',
-                                            height: '14vw',
-                                        }} />
-
+                                <td>
+                                    <img src={SquareImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt="Square Diagram"
+                                        style={{ width: '18vw', height: '14vw', }} />
                                 </td>
-                                <td >
-                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px formula-text'> A
-                                        <span className='equalesto'>=</span>
-                                        a<span className='power'>2</span></h3>
+                                <td>
+                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px formula-text'>A = a<sup>2</sup></h3>
                                 </td>
-                                <td >
-                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Square</h3>
+                                <td>
+                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px'>Square</h3>
                                 </td>
-
                             </tr>
-
                             <tr>
                                 <td>
-                                    <img src={RectangleImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt='' />
+                                    <img src={RectangleImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt="Rectangle Diagram"
+                                        style={{ width: '18vw', height: '14vw', }} />
                                 </td>
                                 <td>
-                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px formula-text'>A
-                                        <span className='equalesto'>=</span>
-                                        d.b</h3>
+                                    <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px formula-text'>A = d.b</h3>
                                 </td>
                                 <td>
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Rectangle</h3>
                                 </td>
-
                             </tr>
-
                             <tr>
                                 <td>
-                                    <img src={HollowReactangleImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt=''
+                                    <img src={HollowReactangleImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt="Rectangle Diagram"
                                         style={{
                                             width: '13.5vw',
                                             height: '16vw',
-                                        }}
-                                    />
+                                        }} />
                                 </td>
                                 <td>
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px formula-text'>A
                                         <span className='equalesto'>=</span>
-                                        (d.b) – (d<span className='LowerPower'>i</span>.b<span className='LowerPower'>i</span>)</h3>
+                                        (d.b) – (d<span className='LowerPower'>i </span> <span style={{ margin: '0 5px', marginRight: '2px' }}>.</span>b<span className='LowerPower'>i</span>)
+                                    </h3>
                                 </td>
                                 <td>
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Hollow rectangle</h3>
                                 </td>
                             </tr>
-
-
                             <tr>
                                 <td>
-                                    <img className='structure-analysis-calculator-formula-dropdown-section-img' src={TeeSectionImg} alt='' />
+                                    <img src={TeeSectionImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt="Rectangle Diagram" />
                                 </td>
                                 <td>
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px formula-text'>A
@@ -197,13 +190,9 @@ export default function AreaOfSection() {
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Tee Section</h3>
                                 </td>
                             </tr>
-
-
-
-
                             <tr>
                                 <td>
-                                    <img className='structure-analysis-calculator-formula-dropdown-section-img' src={ChannelImg} alt='' />
+                                    <img src={ChannelImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt="Rectangle Diagram" />
                                 </td>
                                 <td>
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px formula-text'>
@@ -220,9 +209,10 @@ export default function AreaOfSection() {
                             </tr>
                             <tr>
                                 <td>
-                                    <img className='structure-analysis-calculator-formula-dropdown-section-img' src={IsectionImg} alt='' />
+                                    <img src={IsectionImg} className='structure-analysis-calculator-formula-dropdown-section-img' alt="Rectangle Diagram" />
                                 </td>
                                 <td>
+
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px formula-text'>
                                         A
                                         <span className='equalesto'>=</span>
@@ -235,7 +225,6 @@ export default function AreaOfSection() {
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>I Section</h3>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
                                     <img className='structure-analysis-calculator-formula-dropdown-section-img' src={LsectionImg} alt=''
@@ -275,9 +264,7 @@ export default function AreaOfSection() {
                                 <td>
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Circle</h3>
                                 </td>
-
                             </tr>
-
                             <tr>
                                 <td>
                                     <img className='structure-analysis-calculator-formula-dropdown-section-img' src={HollowcircleImg} alt=''
@@ -295,35 +282,29 @@ export default function AreaOfSection() {
                                         )
                                     </h3>
                                 </td>
-
                                 <td>
                                     <h3 className='calculator-info-blue-section-main-topic margin-bottom-10px '>Hollow circle</h3>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                 </div>
                 <br />
                 <br />
                 <br />
-                <h3 className='calculator-defination-section first-important heading' style={{ fontSize: '1.8vw', }}>
+                <h3 className='calculator-defination-section text-center first-important heading' style={{ fontSize: '1.8vw', }}>
                     What are the units of area of cross-section?
                 </h3>
-                <h3 className='calculator-defination-section second-important' style={{ marginTop: '15px' }}>
+                <h5 className='calculator-defination-section text-center second-important' style={{ marginTop: '15px', fontSize: '1.2vw' }}>
                     S.I Units of area of cross-section is mm
                     <span className='power'>2</span>
 
-                </h3>
-                <h3 className='calculator-defination-section third-important' style={{ marginTop: '15px' }}>
+                </h5>
+                <h5 className='calculator-defination-section text-center third-important' style={{ marginTop: '15px', fontSize: '1.2vw' }}>
                     Imperial Units of the area of cross-section is in
                     <span className='power'>2</span>
                     .
-                </h3>
+                </h5>
                 <br />
                 <br />
                 <br />

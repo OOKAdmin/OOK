@@ -5,7 +5,7 @@
 }
 
 /* First section */
-
+/* 
 .Aboutus-header-section {
     overflow: hidden;
 }
@@ -35,10 +35,10 @@
     height: 0.3vw;
     background-image: linear-gradient(to right, #181a46, #803cb2);
     margin-top: 15px;
-}
+} */
 
 /* Second Section */
-.calculator-defination-div {
+/* .calculator-defination-div {
     height: 50vh;
     overflow: hidden;
     position: relative;
@@ -49,10 +49,10 @@
     font-size: 1.1vw;
     font-family: BMWTypeNext, Helvetica Neue, -apple-system, "system-ui", BlinkMacSystemFont, serif;
     font-weight: 400;
-}
+} */
 
 /* Third Section */
-
+/* 
 .Aboutus-Speciality {
     display: flex;
     justify-content: space-evenly;
@@ -108,15 +108,14 @@
 .vision-text h2.AboutUsVision-h2,
 .mission-text h2 {
     font-size: 1vw;
-    /* font-family: 'Kanit', sans-serif !important; */
     text-align: center;
     margin-top: 10px;
     font-weight: 400;
     font-family: BMWTypeNext, Helvetica Neue, -apple-system, "system-ui", BlinkMacSystemFont, serif;
-}
+} */
 
 /* Fourth Section  */
-.calculator-defination-div.AboutUs {
+/* .calculator-defination-div.AboutUs {
     height: 40vh;
 }
 
@@ -207,10 +206,10 @@
     justify-content: space-evenly;
     width: 85%;
     margin: auto;
-}
+} */
 
 /* media query */
-@media (min-width: 1450px) {
+/* @media (min-width: 1450px) {
     .calculator-defination-section-div.AboutUsVision.expanded {
         height: 25vh !important;
     }
@@ -496,4 +495,4 @@
         width: 85%;
         margin: auto;
     }
-}
+} */

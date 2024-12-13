@@ -142,7 +142,7 @@ export default function PadeyeFileInputParameters() {
                         <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Dynamic load factor
                             (
                                 
-                                <span className='power' style={{ fontSize: '1.5vw', top: '2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '700' }}>  DLF</span>
+                                <span className='power' style={{ fontSize: '1.5vw', top: '2px', color: '#000', fontFamily: "'Kanit', sans-serif !important", fontWeight: '300' }}>  DLF</span>
                             <span className='LowerPower' style={{ color: '#000', fontWeight: '700' }}></span>
 
                             ) 

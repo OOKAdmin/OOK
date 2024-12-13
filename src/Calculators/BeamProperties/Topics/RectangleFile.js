@@ -623,7 +623,8 @@ export default function RectangleFile(props) {
           }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center'  style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
             <br />
             <br />
             <div className='' style={{
@@ -632,7 +633,7 @@ export default function RectangleFile(props) {
               margin: 'auto',
             }}>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
+                <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
                   Area:
                 </h3>
                 <div className='Calculator-Side-A'>
@@ -660,7 +661,7 @@ export default function RectangleFile(props) {
               </div>
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -724,7 +725,7 @@ export default function RectangleFile(props) {
 
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -786,7 +787,7 @@ export default function RectangleFile(props) {
                 </div>
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -850,7 +851,7 @@ export default function RectangleFile(props) {
 
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -946,12 +947,13 @@ export default function RectangleFile(props) {
           <div className={props.togglefunction ? 'show Sectionmodules  ' : 'hidden Sectionmodules  '} style={{ height: '45vw' }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center'  style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
             <br />
             <br />
             <div className='' style={{ borderRadius: '10px', width: '90%', margin: 'auto' }}>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>Area:</h3>
+                <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>Area:</h3>
                 <div className='Calculator-Side-A'>
                   <div className='input-and-select-div'>
                     <input
@@ -976,7 +978,7 @@ export default function RectangleFile(props) {
               </div>
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1038,7 +1040,7 @@ export default function RectangleFile(props) {
 
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1098,7 +1100,7 @@ export default function RectangleFile(props) {
                 </div>
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1159,7 +1161,7 @@ export default function RectangleFile(props) {
               </div>
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>

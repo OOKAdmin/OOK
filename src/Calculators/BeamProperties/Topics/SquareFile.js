@@ -14,7 +14,7 @@ export default function SquareFile(props) {
     'cm²': [100, 1, 0.0001],
     'm²': [1000000, 10000, 1],
   };
-  
+
   const CentroidUnits = ['mm', 'cm', 'm'];
   const CentroidConversionFactors = {
     mm: [1, 0.1, 0.001],
@@ -324,7 +324,7 @@ export default function SquareFile(props) {
               <input
                 className='calculator-input'
                 type="number"
-                value={isNaN(metricInputValue) ? "" : metricInputValue }
+                value={isNaN(metricInputValue) ? "" : metricInputValue}
                 onChange={(e) => handleMetricInputChange(e.target.value)}
               />
               <select
@@ -340,14 +340,14 @@ export default function SquareFile(props) {
               </select>
             </div>
           </div>
-          <button className='structure-analysis-calculator-calculator-right-show-hidden-btn' onClick={props.toggleBreaks}>{props.togglefunction ? ' Hide ' : ' Solve '}</button>
-
+          <button className='structure-analysis-calculator-calculator-right-show-hidden-btn ' onClick={props.toggleBreaks}>{props.togglefunction ? ' Hide ' : ' Solve '}</button>
           <div className={props.togglefunction ? 'show  Sectionmodules  ' : 'hidden  Sectionmodules  '} style={{
             height: '45vw',
           }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center' style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
             <br />
             <br />
             <div className='' style={{
@@ -355,19 +355,17 @@ export default function SquareFile(props) {
               width: '90%',
               margin: 'auto',
             }}>
-              {/* <br /> */}
-              {/* <h3 className='color-white' style={{ fontSize: '1.8vw' }}>Area:</h3> */}
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Area:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
-                  Area:
-                </h3>
+                <h3 className='claculator-conversation-title'>
+                  Area: </h3>
                 <div className='Calculator-Side-A'>
                   <div className='input-and-select-div'>
                     <input
                       className='calculator-input'
                       type="number"
-                      value={isNaN(area) ? "" : area }
+                      value={isNaN(area) ? "" : area}
                       readOnly
                     />
                     <select
@@ -385,7 +383,7 @@ export default function SquareFile(props) {
                 </div>
               </div>
               <br />
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -404,7 +402,7 @@ export default function SquareFile(props) {
                     <input
                       className='calculator-input'
                       type="number"
-                      value={isNaN(centroid) ? "" : centroid }
+                      value={isNaN(centroid) ? "" : centroid}
                       readOnly
                     />
                     <select
@@ -423,7 +421,7 @@ export default function SquareFile(props) {
               </div>
 
               <br />
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moment of inertia:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moment of inertia:</h3>
 
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -458,7 +456,7 @@ export default function SquareFile(props) {
                 </div>
               </div>
               <br />
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modules:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modules:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -493,7 +491,7 @@ export default function SquareFile(props) {
                 </div>
               </div>
               <br />
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -504,7 +502,7 @@ export default function SquareFile(props) {
                     <input
                       className='calculator-input'
                       type="number"
-                      value={isNaN(torsionalConstant) ? "" : torsionalConstant }
+                      value={isNaN(torsionalConstant) ? "" : torsionalConstant}
                       readOnly
                     />
                     <select
@@ -523,6 +521,7 @@ export default function SquareFile(props) {
               </div>
             </div>
           </div >
+
         </>
       )}
 
@@ -537,12 +536,12 @@ export default function SquareFile(props) {
               <input
                 className='calculator-input'
                 type="number"
-                value={isNaN(ImperialinputValue) ? "" : ImperialinputValue }
+                value={isNaN(ImperialinputValue) ? "" : ImperialinputValue}
                 onChange={(e) => handleImperialInputChange(e.target.value)}
               />
               <select
                 className='Calculator-select-option'
-                value={isNaN(ImperialselectedUnit) ? "" : ImperialselectedUnit }
+                value={isNaN(ImperialselectedUnit) ? "" : ImperialselectedUnit}
                 onChange={(e) => handleImperialUnitChange(e.target.value)}
               >
                 {Imperialunits.map((unit) => (
@@ -560,7 +559,7 @@ export default function SquareFile(props) {
           }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center' style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
             <br />
             <br />
             <div className='' style={{
@@ -569,24 +568,24 @@ export default function SquareFile(props) {
               margin: 'auto',
             }}>
               {/* <br /> */}
-              {/* <h3 className='color-white' style={{ fontSize: '1.8vw' }}>Area:</h3> */}
+              {/* <h3 className='text-white' style={{ fontSize: '1.8vw' }}>Area:</h3> */}
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Area:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
-                  Area:
-                </h3>
+                <h3 className='claculator-conversation-title'>
+                  Area: </h3>
                 <div className='Calculator-Side-A'>
                   <div className='input-and-select-div'>
                     <input
                       className='calculator-input'
                       type="number"
-                      value={isNaN(ImperialArea) ? "" : ImperialArea }
+                      value={isNaN(ImperialArea) ? "" : ImperialArea}
                       onChange={(e) => calculateImperialAreaInputChangeValue(e.target.value)}
 
                     />
                     <select
                       className='Calculator-select-option'
-                      value={isNaN(ImperialAreaUnit) ? "" : ImperialAreaUnit }
+                      value={isNaN(ImperialAreaUnit) ? "" : ImperialAreaUnit}
                       onChange={(e) => handleImperialAreaUnitChange(e.target.value)}
                     >
                       {ImperialAreaUnits.map((unit) => (
@@ -599,7 +598,7 @@ export default function SquareFile(props) {
                 </div>
               </div>
               <br />
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -618,13 +617,13 @@ export default function SquareFile(props) {
                     <input
                       className='calculator-input'
                       type="number"
-                      value={isNaN(ImperialCentroid) ? "" : ImperialCentroid }
+                      value={isNaN(ImperialCentroid) ? "" : ImperialCentroid}
                       onChange={(e) => calculateImperialCentroidInputChangeValue(e.target.value)}
 
                     />
                     <select
                       className='Calculator-select-option'
-                      value={isNaN(ImperialCentroidSelectedunit) ? "" : ImperialCentroidSelectedunit }
+                      value={isNaN(ImperialCentroidSelectedunit) ? "" : ImperialCentroidSelectedunit}
                       onChange={(e) => handleImperialCentroidUnitChange(e.target.value)}
                     >
                       {Imperialunits.map((unit) => (
@@ -638,7 +637,7 @@ export default function SquareFile(props) {
               </div>
 
               <br />
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moment of inertia:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moment of inertia:</h3>
 
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -655,12 +654,12 @@ export default function SquareFile(props) {
                     <input
                       className='calculator-input'
                       type="number"
-                      value={isNaN(ImperialmomentOfInertia) ? "" : ImperialmomentOfInertia }
+                      value={isNaN(ImperialmomentOfInertia) ? "" : ImperialmomentOfInertia}
                       onChange={(e) => calculateImperialMomentOfInertia(e.target.value)}
                     />
                     <select
                       className='Calculator-select-option'
-                      value={isNaN(ImperialmomentOfInertiaSelectedUnit) ? "" : ImperialmomentOfInertiaSelectedUnit }
+                      value={isNaN(ImperialmomentOfInertiaSelectedUnit) ? "" : ImperialmomentOfInertiaSelectedUnit}
                       onChange={(e) => handleImperialMomentOfInertiaUnitChange(e.target.value)}
                     >
                       {ImperialMomentOfInertiaUnits.map((unit) => (
@@ -673,7 +672,7 @@ export default function SquareFile(props) {
                 </div>
               </div>
               <br />
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modules:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modules:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -689,13 +688,13 @@ export default function SquareFile(props) {
                     <input
                       className='calculator-input'
                       type="number"
-                      value={isNaN(ImperialSectionModules) ? "" : ImperialSectionModules }
+                      value={isNaN(ImperialSectionModules) ? "" : ImperialSectionModules}
                       onChange={(e) => calculateImperialSectionModules(e.target.value)}
 
                     />
                     <select
                       className='Calculator-select-option'
-                      value={isNaN(ImperialSectionModulesSelectedUnit) ? "" : ImperialSectionModulesSelectedUnit }
+                      value={isNaN(ImperialSectionModulesSelectedUnit) ? "" : ImperialSectionModulesSelectedUnit}
                       onChange={(e) => handleImperialSectionModulesUnitChange(e.target.value)}
                     >
                       {ImperialSectionModulesUnits.map((unit) => (
@@ -708,7 +707,7 @@ export default function SquareFile(props) {
                 </div>
               </div>
               <br />
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -719,13 +718,13 @@ export default function SquareFile(props) {
                     <input
                       className='calculator-input'
                       type="number"
-                      value={isNaN(ImperialTorsionalConstant) ? "" : ImperialTorsionalConstant }
+                      value={isNaN(ImperialTorsionalConstant) ? "" : ImperialTorsionalConstant}
                       onChange={(e) => calculateImperialTorsionalConstant(e.target.value)}
 
                     />
                     <select
                       className='Calculator-select-option'
-                      value={isNaN(ImperialTorsionalConstantSelectedUnit) ? "" : ImperialTorsionalConstantSelectedUnit }
+                      value={isNaN(ImperialTorsionalConstantSelectedUnit) ? "" : ImperialTorsionalConstantSelectedUnit}
                       onChange={(e) => handleImperialTorsionalConstantUnitChange(e.target.value)}
                     >
                       {ImperialTorsionalConstantUnits.map((unit) => (

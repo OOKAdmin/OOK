@@ -60,13 +60,13 @@ export default function ShackleFile() {
                         <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 ${isVisible ? 'scrolled' : ''}`}>Shackle:</h3>
                         <br ref={textRef} />
                         <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 defination ${isVisible ? 'scrolled' : ''}`}>
-                            U-shaped, load-bearing connecting device designed to be strong, durdable, and capable of withstanding high stress and loads. Shackles are typically made of metal, and they come in a variety of shapes and sizes.
+                            U-shaped, load-bearing connecting device designed to be strong, durable, and capable of withstanding high stress and loads. Shackles are typically made of metal, and they come in a variety of shapes and sizes.
                         </h3>
                         <br />
                         <button className={`gbp-h3 structure-analysis-calculator-information-h3-button-Discovermore ${isVisible ? 'scrolled' : ''}`} onClick={handleCombinedClick}>Discover more</button>
                         <br /><br />
                     </div>
-                    <div>
+                    <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                         <img className='structure-analysis-calculator-formula-dropdown-section-img areaimg' src={ShackelBlackBoxImg} alt='' />
                     </div>
                 </div>

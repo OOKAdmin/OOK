@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function HollowReactangleFile(props) {
   const Units = ['mm', 'cm', 'm'];
@@ -145,34 +145,34 @@ export default function HollowReactangleFile(props) {
     setCentroidYc((centroidValue / ConversionFactors[centroidYcSelectedUnit][0]));
   }, [internalinputValue, internalinputInnerValue, internalHeightInnerInputValue, internalHeightInputValue, centroidYcSelectedUnit]);
 
-// Ix
+  // Ix
   const MomentOfInertiaIxUnits = ['mm⁴', 'cm⁴', 'm⁴'];
   const MomentOfInertiaIxConversionFactors = {
     'mm⁴': [1, 1e-4, 1e-12],
     'cm⁴': [1e4, 1, 1e-8],
     'm⁴': [1e12, 1e8, 1],
   };
-  
+
   const [momentOfInertiaIx, setMomentOfInertiaIx] = useState(0);
   const [momentOfInertiaIxSelectedUnit, setMomentOfInertiaIxSelectedUnit] = useState('mm⁴');
   const b = internalinputValue;
   const d = internalHeightInputValue;
   const bi = internalinputInnerValue;
   const di = internalHeightInnerInputValue;
-  
+
   useEffect(() => {
     const value = b;
     if (!isNaN(value)) {
       const momentOfInertiaIx = ((b * Math.pow(d, 3)) - (bi * Math.pow(di, 3))) / 12; // Removed .toFixed(1) here
-  
+
       // Convert momentOfInertiaIx based on the selected unit
       const convertedValue = (momentOfInertiaIx * MomentOfInertiaIxConversionFactors['mm⁴'][MomentOfInertiaIxUnits.indexOf(momentOfInertiaIxSelectedUnit)]);
-  
+
       // Format the output based on the selected unit
-      const formattedValue = momentOfInertiaIxSelectedUnit === 'm⁴' 
+      const formattedValue = momentOfInertiaIxSelectedUnit === 'm⁴'
         ? convertedValue.toExponential(2) // 2 decimal places in scientific notation for m⁴
         : convertedValue.toFixed(3); // 3 decimals for other units
-  
+
       setMomentOfInertiaIx(formattedValue);
     }
   }, [b, d, bi, di, momentOfInertiaIxSelectedUnit]);
@@ -184,23 +184,23 @@ export default function HollowReactangleFile(props) {
     'cm⁴': [1e4, 1, 1e-8],
     'm⁴': [1e12, 1e8, 1],
   };
-  
+
   const [momentOfInertiaIy, setMomentOfInertiaIy] = useState(0);
   const [momentOfInertiaIySelectedUnit, setMomentOfInertiaIySelectedUnit] = useState('mm⁴');
-  
+
   useEffect(() => {
     const value = b;
     if (!isNaN(value)) {
       const momentOfInertiaIy = ((d * Math.pow(b, 3)) - (di * Math.pow(bi, 3))) / 12; // Removed .toFixed(1) here
-  
+
       // Convert momentOfInertiaIy based on the selected unit
       const convertedValue = (momentOfInertiaIy * MomentOfInertiaIyConversionFactors['mm⁴'][MomentOfInertiaIyUnits.indexOf(momentOfInertiaIySelectedUnit)]);
-  
+
       // Format the output based on the selected unit
-      const formattedValue = momentOfInertiaIySelectedUnit === 'm⁴' 
+      const formattedValue = momentOfInertiaIySelectedUnit === 'm⁴'
         ? convertedValue.toExponential(2) // 2 decimal places in scientific notation for m⁴
         : convertedValue.toFixed(3); // 3 decimals for other units
-  
+
       setMomentOfInertiaIy(formattedValue);
     }
   }, [b, d, bi, di, momentOfInertiaIySelectedUnit]);
@@ -213,25 +213,25 @@ export default function HollowReactangleFile(props) {
     'cm³': [1e3, 1, 1e-6],
     'm³': [1e9, 1e6, 1],
   };
-  
+
   const [sectionModulusSx, setSectionModulusSx] = useState(0);
   const [sectionModulusSxSelectedUnit, setSectionModulusSxSelectedUnit] = useState('mm³');
-  
+
   useEffect(() => {
     const value = b;
     if (!isNaN(value)) {
       const momentOfInertia = ((b * Math.pow(d, 3)) - (bi * Math.pow(di, 3))) / 12;
       const centroid = d / 2;
       const sectionModulesValue = momentOfInertia / centroid; // Removed .toFixed(1) here
-  
+
       // Convert sectionModulesValue based on the selected unit
       const convertedValue = (sectionModulesValue * SectionModulusSxConversionFactors['mm³'][SectionModulusSxUnits.indexOf(sectionModulusSxSelectedUnit)]);
-  
+
       // Format the output based on the selected unit
-      const formattedValue = sectionModulusSxSelectedUnit === 'm³' 
+      const formattedValue = sectionModulusSxSelectedUnit === 'm³'
         ? convertedValue.toExponential(2) // 2 decimal places in scientific notation for m³
         : convertedValue.toFixed(3); // 3 decimals for other units
-  
+
       setSectionModulusSx(formattedValue);
     }
   }, [b, d, bi, di, sectionModulusSxSelectedUnit]);
@@ -244,25 +244,25 @@ export default function HollowReactangleFile(props) {
     'cm³': [1e3, 1, 1e-6],
     'm³': [1e9, 1e6, 1],
   };
-  
+
   const [SectionModulusSy, setSectionModulusSy] = useState(0);
   const [SectionModulusSySelectedUnit, setSectionModulusSySelectedUnit] = useState('mm³');
-  
+
   useEffect(() => {
     const value = b;
     if (!isNaN(value)) {
       const momentOfInertia = ((d * Math.pow(b, 3)) - (di * Math.pow(bi, 3))) / 12;
       const centroid = b / 2;
       const sectionModulesValue = momentOfInertia / centroid; // Removed .toFixed(1) here
-  
+
       // Convert sectionModulesValue based on the selected unit
       const convertedValue = (sectionModulesValue * SectionModulusSyConversionFactors['mm³'][SectionModulusSyUnits.indexOf(SectionModulusSySelectedUnit)]);
-  
+
       // Format the output based on the selected unit
-      const formattedValue = SectionModulusSySelectedUnit === 'm³' 
+      const formattedValue = SectionModulusSySelectedUnit === 'm³'
         ? convertedValue.toExponential(2) // 2 decimal places in scientific notation for m³
         : convertedValue.toFixed(3); // 3 decimals for other units
-  
+
       setSectionModulusSy(formattedValue);
     }
   }, [b, d, bi, di, SectionModulusSySelectedUnit]);
@@ -274,23 +274,23 @@ export default function HollowReactangleFile(props) {
     'cm⁴': [1e4, 1, 1e-8],
     'm⁴': [1e12, 1e8, 1],
   };
-  
+
   const [torsionalConstant, setTorsionalConstant] = useState(0);
   const [torsionalConstantSelectedUnit, setTorsionalConstantSelectedUnit] = useState('mm⁴');
-  
+
   useEffect(() => {
     const value = b;
     if (!isNaN(value)) {
       const torsional = (2 * Math.PI * Math.pow(bi * (b - di), 2) * Math.pow(d - bi, 2)) / (b * di + d * bi - Math.pow(di, 2) - Math.pow(bi, 2));
-  
+
       // Convert torsional based on the selected unit
       const convertedValue = (torsional * TorsionalConstantConversionFactors['mm⁴'][TorsionalConstantUnits.indexOf(torsionalConstantSelectedUnit)]);
-  
+
       // Format the output based on the selected unit
-      const formattedValue = torsionalConstantSelectedUnit === 'm⁴' 
+      const formattedValue = torsionalConstantSelectedUnit === 'm⁴'
         ? convertedValue.toExponential(2) // 2 decimal places in scientific notation for m⁴
         : convertedValue.toFixed(3); // 3 decimals for other units
-  
+
       setTorsionalConstant(formattedValue);
     }
   }, [b, d, bi, di, torsionalConstantSelectedUnit]);
@@ -765,7 +765,8 @@ export default function HollowReactangleFile(props) {
           }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center' style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
             <br />
             <br />
             <div className='' style={{
@@ -773,10 +774,11 @@ export default function HollowReactangleFile(props) {
               width: '90%',
               margin: 'auto',
             }}>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Area:</h3>
+
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
-                  Area:
-                </h3>
+                <h3 className='claculator-conversation-title'>
+                  Area: </h3>
                 <div className='Calculator-Side-A'>
                   <div className='input-and-select-div'>
                     <input
@@ -801,7 +803,7 @@ export default function HollowReactangleFile(props) {
               </div>
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -863,7 +865,7 @@ export default function HollowReactangleFile(props) {
 
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -923,7 +925,7 @@ export default function HollowReactangleFile(props) {
                 </div>
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -985,7 +987,7 @@ export default function HollowReactangleFile(props) {
 
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1123,14 +1125,16 @@ export default function HollowReactangleFile(props) {
           <div className={props.togglefunction ? 'show Sectionmodules' : 'hidden Sectionmodules'} style={{ height: '45vw' }}>
             <br />
             <br />
-            <h3 className='text-aligh-center color-white'>Section Properties Of Beam</h3>
+            <h3 className='text-white calculator-defination-section text-center' style={{ fontSize: '3vw', }}>Section Properties Of Beam</h3>
+
             <br />
             <br />
             <div className='' style={{ borderRadius: '10px', width: '90%', margin: 'auto' }}>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Area:</h3>
+
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw', width: '100%' }}>
-                  Area:
-                </h3>
+                <h3 className='claculator-conversation-title'>
+                  Area: </h3>
                 <div className='Calculator-Side-A'>
                   <div className='input-and-select-div'>
                     <input
@@ -1155,7 +1159,7 @@ export default function HollowReactangleFile(props) {
               </div>
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Centroid:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1217,7 +1221,7 @@ export default function HollowReactangleFile(props) {
 
               <br />
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Moments of Inertia :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1277,7 +1281,7 @@ export default function HollowReactangleFile(props) {
                 </div>
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Section Modulus :</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>
@@ -1337,7 +1341,7 @@ export default function HollowReactangleFile(props) {
                 </div>
               </div>
 
-              <h3 className='color-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
+              <h3 className='text-white bold-heading-solution' style={{ fontSize: '1.8vw' }}>Torsional Constant:</h3>
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <h3 className='claculator-conversation-title'>

@@ -1,20 +1,62 @@
+
+.mae-cad-info-second-section-main-grid-explore-more-grid div h3.gbp-h3.structure-analysis-calculator-information-h3 {
+    line-height: normal;
+    padding: 0vw 0;
+    color: #fff;
+    font-size: 3.8vw !important;
+}
+.mae-cad-info-second-section-main-grid-explore-more-grid div h3.gbp-h3.structure-analysis-calculator-information-h3.defination {
+    font-size: 1.6vw !important;
+    color: #fff;
+}
+.gbp-h3.structure-analysis-calculator-information-h3.defination.scrolled, .gbp-h3.structure-analysis-calculator-information-h3-button-Discovermore.scrolled {
+    animation-name: blackBoxTransactiondescriptionbtn;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    transform: translate(0px, 0px);
+    animation-delay: 0.5s;
+    opacity: 1;
+}
+.gbp-h3.structure-analysis-calculator-information-h3-button-Discovermore {
+    color: #000 !important;
+    border: 1px solid;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 8px 15px;
+    font-size: 17px;
+    letter-spacing: normal;
+    font-weight: 400;
+    cursor: pointer;
+}
+.gbp-h3.structure-analysis-calculator-information-h3.defination, .gbp-h3.structure-analysis-calculator-information-h3-button-Discovermore {
+    transform: translate(50px, 0px);
+    opacity: 0;
+}
+.gbp-h3 {
+    width: 100%;
+    transform: none;
+    position: static;
+    font-size: 28px;
+    line-height: 37px;
+    letter-spacing: -.1px;
+    font-family: BMWTypeNext, Helvetica Neue, -apple-system, "system-ui", BlinkMacSystemFont, serif;
+    font-size: 28px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 26px;
+    padding: 15px 0;
+}
+
 span.LowerPowerminus2px.sectionmodulesSolutionLowerPower {
     position: relative;
     top: 3px;
 }
-
+/* 
 .Beamdeflaction.height110 {
     height: 165vh !important;
 }
 
-.mae-cad-info-second-section-main-grid-explore-more-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr !important;
-    justify-content: center;
-    align-items: center;
-    height: 65vh;
-    background: linear-gradient(45deg, black, #000000);
-}
 
 .calculator-Area {
     padding-left: 5vw;
@@ -22,13 +64,6 @@ span.LowerPowerminus2px.sectionmodulesSolutionLowerPower {
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-.mae-cad-info-second-section-main-grid-explore-more-grid div h3.gbp-h3.structure-analysis-calculator-information-h3 {
-    line-height: normal;
-    padding: 0vw 0;
-    color: #fff;
-    font-size: 3.8vw !important;
 }
 
 .gbp-h3.structure-analysis-calculator-information-h3 {
@@ -75,16 +110,6 @@ span.LowerPowerminus2px.sectionmodulesSolutionLowerPower {
     transform: translate(50px, 0px);
     opacity: 0;
 }
-
-.structure-analysis-calculator-formula-dropdown-section-img.areaimg {
-    width: 450px;
-    height: 250px;
-    transform: translate(0px, 0px);
-    border-radius: 20px;
-    display: block;
-    margin: 10px 80px;
-}
-
 .input-and-select-div {
     display: flex;
     justify-content: end;
@@ -173,10 +198,10 @@ span.LowerPowerminus2px.sectionmodulesSolutionLowerPower {
 
 .ScrollTransactionTwoBeamDeflactionDropDown.showBeamDeflection.ScrollTransactionOne.ScrollTransactionTwo.LoadBendingDeflectionclasses.LoadPage {
     top: 195% !important;
-}
+} */
 
 /* Deflection Media query */
-@media (max-width: 1120px) {
+/* @media (max-width: 1120px) {
     .mae-calculator-info.PadeyeDropDown.active {
         padding: 80px 1vw;
         height: -moz-fit-content;
@@ -875,4 +900,4 @@ span.LowerPowerminus2px.sectionmodulesSolutionLowerPower {
         width: 100%;
         margin: auto;
     }
-}
+} */

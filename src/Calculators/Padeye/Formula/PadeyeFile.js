@@ -61,15 +61,15 @@ export default function PadeyeFile() {
                         <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 ${isVisible ? 'scrolled' : ''}`} >Pad-Eye:</h3>
                         <br ref={textRef} />
                         <h3 className={`gbp-h3 structure-analysis-calculator-information-h3 defination ${isVisible ? 'scrolled' : ''}`} >
-                            Consist of main plate having hole and with or without occasional ring stiffeners (cheek plate)
-                            welded to the main plate.
+                            A plate having hole  with or without occasional ring stiffeners (cheek plate)
+                            welded to the main plate used in lifting and rigging operations to connect slings, shackles, or other lifting equipment.
 
                         </h3>
                         <br />
                         <button className={`gbp-h3 structure-analysis-calculator-information-h3-button-Discovermore ${isVisible ? 'scrolled' : ''}`} onClick={handleCombinedClick}>Discover more</button>
                         <br /><br />
                     </div>
-                    <div>
+                    <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                         <img className='structure-analysis-calculator-formula-dropdown-section-img areaimg' src={PadeyeBlackbox} alt='' />
                     </div>
                 </div>
@@ -91,19 +91,19 @@ export default function PadeyeFile() {
                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
                             <div>
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Load Capacity: </h3>
-                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>For single point lift padeye load capacity should be exceeded then the total weight of the load. For multi-point, the load capacity of total number of padeye should be exceeded then the total weight of the load.</h3>
+                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>A critical factor in the selection and use of padeyes, as it determines how much weight the padeye can safely support.</h3>
                                 <br />
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Material Selection:</h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Padeye material must be crossive resistant, ductile, and have good strength and durability.</h3>
                                 <br />
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Shackle Compatibility:</h3>
-                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>SWL (Safe Working Load) of the shackle should equal or exceed the SWL of the padeye. Padeye hole diameter must match the shackle pin diameter, with a clearance not exceeding 6% of the pin diameter.</h3>
+                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>SWL (Safe Working Load) of the shackle should equal to the SWL of the padeye. Padeye hole diameter must match the shackle pin diameter, with a clearance not exceeding 6% of the pin diameter.</h3>
                                 <br />
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Weld Type and Size:</h3>
                                 <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>The type and size of welds must be suitable to handle the load that will be applied to the padeye. Welds must be designed to distribute stress evenly and avoid creating weak points.</h3>
                                 <br />
                                 <h3 className='calculator-info-blue-section-main-topic TopicOfDropdown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left', fontSize: '2.2vw', important: true }}>Lift Configuration:</h3>
-                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Types of lift, such as straight lifting or multi-point lifts, will affect the padeye design. Such as vertical padeyes are used for straight lifts, while angular designs may be needed for multi-point lifts to prevent lateral bending moments.</h3>
+                                <h3 className='calculator-info-blue-section-main-topic DefinatinOfDropDown' style={{ padding: '0', margin: 'auto', width: '85%', justifyContent: 'left' }}>Depend upon the type of lift, such as straight lifting or multi-point lifts, will affect the padeye design. Such as vertical padeyes are used for straight lifts, while angular designs may be needed for multi-point lifts to prevent lateral bending moments.</h3>
                                 <br />
                             </div>
                         </div>
@@ -130,10 +130,10 @@ export default function PadeyeFile() {
                         </div>
                         <br />
                         <br />
-                        <PadeyeFileInputParameters/>
+                        <PadeyeFileInputParameters />
                         <br />
                         <br />
-                        <PadeyeFileOutputparameters/>
+                        <PadeyeFileOutputparameters />
 
                     </div>
 

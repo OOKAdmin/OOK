@@ -64,7 +64,7 @@ export default function OutputParameterFile() {
                         <button className={`gbp-h3 structure-analysis-calculator-information-h3-button-Discovermore ${isVisible ? 'scrolled' : ''} `} onClick={handleCombinedClick}>Discover more</button>
                         <br /><br />
                     </div>
-                    <div>
+                    <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                         <img className='structure-analysis-calculator-formula-dropdown-section-img areaimg' src={Areaimg} alt='' />
                     </div>
                 </div>

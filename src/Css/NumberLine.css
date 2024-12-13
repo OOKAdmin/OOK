@@ -1,4 +1,4 @@
-.number-line-container {
+/* .number-line-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,6 @@
 
 .support-image {
     position: absolute;
-    /* top: -20px; */
     transform: translateX(-50%);
     height: 40px;
 }
@@ -38,7 +37,6 @@
 
 .point-load-magnitude {
     font-size: 1vw;
-    /* color: #007bff; */
     margin-bottom: 5px;
 }
 
@@ -46,7 +44,6 @@
     position: relative;
     width: 100%;
     height: 30px;
-    /* Height for the number line labels */
 }
 
 .number {
@@ -55,7 +52,6 @@
     color: black;
     white-space: nowrap;
     transform: translateX(-50%);
-    /* Center the number horizontally */
 }
 
 .number-line-container {
@@ -66,7 +62,6 @@
 .reactions-container {
     position: relative;
     margin-bottom: 10px;
-    /* Space between reactions and the beam line */
 }
 
 .reactions {
@@ -80,7 +75,6 @@
     background: #f0f0f0;
     border-radius: 4px;
     z-index: 100;
-    /* opacity: 0; */
 }
 
 .reaction-img {
@@ -103,7 +97,6 @@
 .numbers {
     position: relative;
     margin-top: 10px;
-    /* Space between the beam line and numbers */
 }
 
 .number {
@@ -115,8 +108,6 @@
 .distributed-load-container {
     position: absolute;
     height: 20px;
-    /* background-color: rgba(0, 123, 255, 0.3); */
-    /* border: 1px solid #007bff; */
     top: -28px;
     display: flex;
     align-items: center;
@@ -127,7 +118,6 @@
     position: absolute;
     top: -60px;
     font-size: 15px;
-    /* color: #007bff; */
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -137,4 +127,4 @@
     height: 8vh;
     width: 100% !important;
     transform: translate(0px, -2vh);
-}
+} */
